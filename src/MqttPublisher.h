@@ -178,7 +178,7 @@ private:
       reconnectTimer.detach();
       DEBUG(F("MQTT client connection established."));
       char message[64];
-      snprintf(message, 64, "Hello from %08X, running SMLReader version %s.", ESP.getChipId(), VERSION);
+      snprintf(message, 64, "Hello from %08X, SMLReader version %s. @th3_s4int", ESP.getChipId(), VERSION);
       info(message);
       publish(baseTopic + MQTT_LWT_TOPIC, MQTT_LWT_PAYLOAD_ONLINE, MQTT_LWT_QOS, MQTT_LWT_RETAIN);
     });
